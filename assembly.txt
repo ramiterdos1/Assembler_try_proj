@@ -1,0 +1,17 @@
+       ORG 2000H
+       LXI B , AA13h;
+       PUSH B
+START: CALL l1k ;
+       CALL bay;
+       MVI A,56H;
+       ORG 1000H
+       MOV B,A ; hi there
+       MVI A, 32h ; added
+       ADD B; B added
+l1k :  CALL START;
+       MOV A , C ;
+       DCR C
+       HLT ;       
+bay:   ADD A;
+       END
+       

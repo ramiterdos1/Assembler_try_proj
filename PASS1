@@ -1,0 +1,25 @@
+ORG 3000H 
+PUSH B 
+START: CALL l1k 
+NOP
+ORA B 
+MVI A,56H 
+ORG 3000H 
+NOP
+L%0 : XRA A 
+ MVI B, 11h 
+ ADD B 
+ MOV B,A 
+MVI A, 32h 
+ADD B 
+ORG 2000H 
+L%1 : XRA A 
+ MVI B, 11h 
+ ADD B 
+ ADD A 
+D%0 : ANA A 
+ PUSH B 
+ l1k : CALL START 
+MOV A , C 
+DCR C 
+bviviviv: ORA A 

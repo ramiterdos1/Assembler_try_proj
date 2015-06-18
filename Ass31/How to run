@@ -1,0 +1,6 @@
+1. install flex and bison
+Type:
+2. flex getToks.l
+3. yacc -d grammar.y
+4. cc y.tab.c lex.yy.c -o TOK
+5. ./TOK < input_file_name

@@ -1,0 +1,29 @@
+	ORR MACRO
+    L : XRA A
+        MVI B, 11h;
+        ADD B
+        ENDM
+        ABC MACRO
+    D : ANA A
+        PUSH B
+        ENDM
+        ORG 3000H
+        PUSH B
+ START: CALL l1k ;
+        NOP
+        ORA B
+        MVI A,56H;
+        ORG 3000H
+        NOP
+        ORR
+        MOV B,A ; hi there
+        MVI A, 32h ; added
+        ADD B; B added
+        ORG 2000H
+        ORR
+        ADD A;
+        ABC
+  l1k : CALL START;
+        MOV A , C ;
+        DCR C
+bviviviv: ORA A

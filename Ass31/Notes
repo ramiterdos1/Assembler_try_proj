@@ -1,0 +1,4 @@
+1. Does not generate intermediate code. (as required)
+2. Performs synctactic checks of common prograaming constructs.
+3. No consideration for precedence or associativity.
+4. Can have many bugs.
